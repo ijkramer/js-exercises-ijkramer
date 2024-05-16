@@ -7,7 +7,21 @@
  *    if no number was provided or if the value provided wasn't a number (hint: typeof), return false
  */
 function fizzBuzz(num) {
-  
+  if(num % 3 == 0){
+    if(num % 5 ==0){
+      return `fizzbuzz`;
+    }
+    return `fizz`; 
+  } else if(num % 5 == 0){
+    if(num % 3 ==0){
+      return `fizzbuzz`;
+    }
+    return `buzz`;
+  } else if(/\d/.test(num) == false){
+    return false;
+  } else{
+    return num;
+  }
 }
 
 module.exports = {
